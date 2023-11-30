@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 901, in na_op
+    result = op(x, y)
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 133, in <lambda>
+    rand_=bool_method(lambda x, y: operator.and_(y, x),
+TypeError: unsupported operand type(s) for &: 'str' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 919, in na_op
+    result = lib.scalar_binop(x, y, op)
+  File "pandas/_libs/lib.pyx", line 802, in pandas._libs.lib.scalar_binop
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 133, in <lambda>
+    rand_=bool_method(lambda x, y: operator.and_(y, x),
+TypeError: unsupported operand type(s) for &: 'bool' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pudb/__init__.py", line 148, in runscript
+    dbg._runscript(mainpyfile)
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pudb/debugger.py", line 514, in _runscript
+    self.run(statement)
+  File "/usr/lib/python3.6/bdb.py", line 434, in run
+    exec(cmd, globals, locals)
+  File "<string>", line 1, in <module>
+  File "tese_results.py", line 197, in <module>
+    main()
+  File "tese_results.py", line 196, in main
+    analyse_hyperparameters()
+  File "tese_results.py", line 141, in analyse_hyperparameters
+    df = df.loc[df['algorithm'] == algorithm & df['params'] == params]
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 954, in wrapper
+    na_op(self.values, other),
+  File "/mnt/c/Users/joaox/OneDrive/Ambiente de Trabalho/Tese/Tese/lib/python3.6/site-packages/pandas/core/ops.py", line 924, in na_op
+    raise TypeError(msg)
+TypeError: cannot compare a dtyped [object] array with a scalar of type [bool]
